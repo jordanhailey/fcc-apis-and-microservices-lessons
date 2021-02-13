@@ -3,6 +3,7 @@
 	"author": "jordanhailey",
 	"description": "Working through FreeCodeCamps lessons on APIs and Microservices",
 	"keywords": ["freecodecamp", "fooPackage", "fooJSON"],
+	"license": "MIT",
 	"dependencies": {
 		"express": "^4.14.0"
 	},
