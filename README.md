@@ -27,6 +27,11 @@
 >
 > [see directory](./node-express-basics)
 
+- I learned about the global variable in Node `__dirname`  which gives the absolute path of the directory that contains the currently executing file (I used to think `./` was just as reliable but I was mistaken [^2]).
+- I have a better understanding of how to use express to handle routing and serve content.
+	- I learned that when watching for any request method with a path that has a colon `:` character prefixed (e.g. `/:somepath/foo`) that path becomes a variable tied to the request object (i.e. `req.params.somepath`)
+	- I learned the basics about how to build and chain middleware functions, and how to pass information along in the request object until a final response call is made.
+
 
 ## MongoDB and Mongoose Basics
 > [src](https://www.freecodecamp.org/learn/apis-and-microservices#mongodb-and-mongoose)
@@ -34,3 +39,4 @@
 
 
 [^1]: https://gist.github.com/SKempin/b7857a6ff6bddb05717cc17a44091202
+[^2]: https://www.geeksforgeeks.org/difference-between-__dirname-and-in-node-js/
