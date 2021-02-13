@@ -31,7 +31,7 @@ const findPeopleByName = (personName, done) => {
 };
 
 const findOneByFood = (food, done) => {
-  done(null /*, data*/);
+  Person.findOne({favoriteFoods:food},doneCallback(done));
 };
 
 const findPersonById = (personId, done) => {
