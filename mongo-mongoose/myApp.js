@@ -10,27 +10,24 @@ let personSchema = new mongoose.Schema({
 
 let Person = new mongoose.model("Person",personSchema); // Singular name of the collection your model is for, Mongoose will look for lowercased "persons"
 
+const doneCallback = (done) => {
+  return (err,data)=>{
+    if (err) return done(null)
+    return done(null, data);
+  }
+}
+
 const createAndSavePerson = (done) => {
   let newPerson = new Person({name:"Jordan",age:30,favoriteFoods:["tacos"]})
-  newPerson.save((err,data)=>{
-    if (err) done(null)
-    done(null, data);
-  })
+  newPerson.save(doneCallback(done));
 };
 
 const createManyPeople = (arrayOfPeople, done) => {
-  Person.create(arrayOfPeople,(err,data)=>{
-    if (err) done(null)
-    done(null, data);
-  })
+  Person.create(arrayOfPeople,doneCallback(done));
 };
 
 const findPeopleByName = (personName, done) => {
-  let foundPeople = Person.find({name:personName})
-  foundPeople.save((err,data)=>{
-    if (err) done(null)
-    done(null, data);
-  })
+  Person.find({name:personName},doneCallback(done));
 };
 
 const findOneByFood = (food, done) => {
