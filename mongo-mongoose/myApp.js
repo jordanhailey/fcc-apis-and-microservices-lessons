@@ -2,7 +2,13 @@ require('dotenv').config();
 const mongoose = require('mongoose');
 mongoose.connect(process.env.MONGO_URI, { useNewUrlParser: true, useUnifiedTopology: true });
 
-let Person;
+let personSchema = new mongoose.Schema({
+  name: {type:String, required:true},
+  age: {type:Number},
+  favoriteFoods: [String]
+});
+
+let Person = new mongoose.model("Person",personSchema); // Singular name of the collection your model is for, Mongoose will look for lowercased "persons"
 
 const createAndSavePerson = (done) => {
   done(null /*, data*/);
