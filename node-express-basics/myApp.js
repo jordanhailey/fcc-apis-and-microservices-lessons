@@ -55,6 +55,12 @@ app.get('/:word/echo',(req,res)=>{
   res.json({echo:req.params.word})
 })
 
+// Lesson 10: Query params
+const nameHandler = (req,res) =>{
+  const {first,last} = req.query;
+  res.json({name:`${first} ${last}`})
+}
+
 
 
 
