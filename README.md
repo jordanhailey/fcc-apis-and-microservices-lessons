@@ -15,10 +15,14 @@
 
 
 ## NPM Basics
+>[see directory](./npm-basics)
+
 - I already knew the basics of Semantic Versioning, but I got a clearer understanding of the `MAJOR.MINOR.PATCH` meaning and how to control what updates your applications will allow with the `~` and `^` prefixes.
 
 
 ## Node and Express Basics
+>[see directory](./node-express-basics)
+
 
 ## MongoDB and Mongoose Basics
 
