@@ -63,8 +63,13 @@ const removeManyPeople = (done) => {
 
 const queryChain = (done) => {
   const foodToSearch = "burrito";
-
-  done(null /*, data*/);
+  Person.find({favoriteFoods:foodToSearch},(err,docs)=>{
+    if (err) return;
+    let [p1,p2] = docs.sort((a,b)=> a.name > b.name ? 1 : -1).slice(0,2)
+    p1.age = undefined;
+    p2.age = undefined;
+    doneCallback(done)(err,[p1,p2])
+  })
 };
 
 /** **Well Done !!**
