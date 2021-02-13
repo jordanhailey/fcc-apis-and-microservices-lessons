@@ -2,6 +2,7 @@
 	"name": "fcc-learn-npm-package-json",
 	"author": "jordanhailey",
 	"description": "Working through FreeCodeCamps lessons on APIs and Microservices",
+	"keywords": ["freecodecamp", "fooPackage", "fooJSON"],
 	"dependencies": {
 		"express": "^4.14.0"
 	},
