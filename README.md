@@ -16,6 +16,7 @@
 
 ## NPM Basics
 > [src](https://www.freecodecamp.org/learn/apis-and-microservices#managing-packages-with-npm)
+>
 > [see directory](./npm-basics)
 
 - I already knew the basics of Semantic Versioning, but I got a clearer understanding of the `MAJOR.MINOR.PATCH` meaning and how to control what updates your applications will allow with the `~` and `^` prefixes.
@@ -23,6 +24,7 @@
 
 ## Node and Express Basics
 > [src](https://www.freecodecamp.org/learn/apis-and-microservices#basic-node-and-express)
+>
 > [see directory](./node-express-basics)
 
 
