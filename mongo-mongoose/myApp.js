@@ -43,7 +43,7 @@ const findEditThenSave = (personId, done) => {
   findPersonById(personId,(err,doc)=>{
     if (err) return;
     doc.favoriteFoods.push(foodToAdd);
-    doc.save(doneCallback(done))
+    doc.save(doneCallback(done));
     })
 };
 
@@ -58,8 +58,7 @@ const removeById = (personId, done) => {
 
 const removeManyPeople = (done) => {
   const nameToRemove = "Mary";
-
-  done(null /*, data*/);
+  Person.remove({name:nameToRemove},doneCallback(done));
 };
 
 const queryChain = (done) => {
