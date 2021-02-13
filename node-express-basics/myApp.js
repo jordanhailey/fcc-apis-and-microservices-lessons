@@ -1,3 +1,4 @@
+import bodyParser from 'body-parser';
 var express = require('express');
 var app = express();
 // Lesson 1: Print message to console
@@ -61,6 +62,12 @@ const nameHandler = (req,res) =>{
   res.json({name:`${first} ${last}`})
 }
 
+
+
+
+// Lesson 11: body-parser middleware
+app.use('/name',bodyParser.urlencoded({extended: false}))
+app.route('/name').get(nameHandler)
 
 
 
