@@ -13,8 +13,17 @@ const middlewareIPlogger = (req,res,next)=>{
 }
 app.use(middlewareIPlogger);
 
+// Lesson 8: Chain Middleware
+const middlewareTimeLogger = (req,res,next)=>{
+  const now = new Date().toString();
+  req.time = now;
+  next()
+}
+app.use('/now',middlewareTimeLogger)
 
-
+app.get('/now',(req,res)=>{
+  res.json({time:req.time})
+})
 
 app.get('/',(req,res)=>{
   // Lesson 2: All get requests to "/" receive "Hello Express" message
