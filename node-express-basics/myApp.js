@@ -3,9 +3,11 @@ var app = express();
 // Lesson 1: Print message to console
 console.log("Hello World");
 
-// Lesson 2: All get requests to "/" receive "Hello Express" message
 app.get('/',(req,res)=>{
-  res.send("Hello Express")
+  // Lesson 2: All get requests to "/" receive "Hello Express" message
+  // res.send("Hello Express")
+  // Lesson 3: Send index.html in the ./views folder as response
+  res.sendFile(`${__dirname}/views/index.html`,(err)=>{console.error(err)})
 })
 
 
