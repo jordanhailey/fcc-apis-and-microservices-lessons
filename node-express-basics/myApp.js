@@ -62,12 +62,16 @@ const nameHandler = (req,res) =>{
   res.json({name:`${first} ${last}`})
 }
 
-
+// Lesson 12: Get Data from POST Requests
+const nameParser = (req,res)=>{
+  const {first,last} = req.body;
+  res.json({name:`${first} ${last}`})
+}
 
 
 // Lesson 11: body-parser middleware
 app.use('/name',bodyParser.urlencoded({extended: false}))
-app.route('/name').get(nameHandler)
+app.route('/name').get(nameHandler).post(nameParser)
 
 
 
