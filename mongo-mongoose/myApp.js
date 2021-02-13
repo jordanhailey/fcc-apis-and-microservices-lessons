@@ -49,11 +49,11 @@ const findEditThenSave = (personId, done) => {
 
 const findAndUpdate = (personName, done) => {
   const ageToSet = 20;
-  Person.findOneAndUpdate({name:personName},{age:ageToSet},{new:true},doneCallback(done))
+  Person.findOneAndUpdate({name:personName},{age:ageToSet},{new:true},doneCallback(done));
 };
 
 const removeById = (personId, done) => {
-  done(null /*, data*/);
+  Person.findByIdAndRemove(personId,doneCallback(done));
 };
 
 const removeManyPeople = (done) => {
