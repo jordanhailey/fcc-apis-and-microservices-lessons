@@ -11,7 +11,11 @@ let personSchema = new mongoose.Schema({
 let Person = new mongoose.model("Person",personSchema); // Singular name of the collection your model is for, Mongoose will look for lowercased "persons"
 
 const createAndSavePerson = (done) => {
-  done(null /*, data*/);
+  let newPerson = new Person({name:"Jordan",age:30,favoriteFoods:["tacos"]})
+  newPerson.save((err,data)=>{
+    if (err) done(null)
+    done(null, data);
+  })
 };
 
 const createManyPeople = (arrayOfPeople, done) => {
