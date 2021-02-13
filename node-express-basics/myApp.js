@@ -19,8 +19,11 @@ app.use('/public',middlewareExample);
 
 // Lesson 5: Serve JSON
 // Respond to all GET requests to '/json' with a JSON object
+// Lesson 6: setup variable in .env file and use it filter json output
 app.get('/json',(req,res)=>{
   const responseObj = {"message":"Hello json"};
+  process.env.MESSAGE_STYLE === "uppercase" ?
+  responseObj.message = responseObj.message.toUpperCase() : null;
   res.json(responseObj);
 })
 
