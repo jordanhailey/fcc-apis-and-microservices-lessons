@@ -35,7 +35,8 @@
 
 ## MongoDB and Mongoose Basics
 > [src](https://www.freecodecamp.org/learn/apis-and-microservices#mongodb-and-mongoose)
-
+>
+> [see directory](./mongo-mongoose)
 
 
 [^1]: https://gist.github.com/SKempin/b7857a6ff6bddb05717cc17a44091202
