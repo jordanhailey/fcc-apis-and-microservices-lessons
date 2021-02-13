@@ -50,31 +50,10 @@ app.get('/json',(req,res)=>{
 })
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+// Lesson 9: Route params
+app.get('/:word/echo',(req,res)=>{
+  res.json({echo:req.params.word})
+})
 
 
 
