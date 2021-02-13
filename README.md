@@ -1,14 +1,13 @@
 # FreeCodeCamp's APIs and Microservices Lessons
 
-## TOC
+**TOC:**
 - [FreeCodeCamp's APIs and Microservices Lessons](#freecodecamps-apis-and-microservices-lessons)
-  - [TOC](#toc)
-  - [Lessons learned:](#lessons-learned)
+  - [Lessons learned](#lessons-learned)
   - [NPM Basics](#npm-basics)
   - [Node and Express Basics](#node-and-express-basics)
   - [MongoDB and Mongoose Basics](#mongodb-and-mongoose-basics)
 ***
-## Lessons learned:
+## Lessons learned
 - I imagined each lesson would build on top of the other in the same repo, instead I realized I was wrong *after finishing the first section*. **So I undertook a small project to clean things up and bring all lessons into one repository.**
   1. I made a new repository, I setup my remote `origin` to the remote branch I had already been pushing to.
   2. I created a subtree [^1], from the `main` branch of that `origin` remote.
