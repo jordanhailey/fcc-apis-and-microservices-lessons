@@ -3,6 +3,19 @@ var app = express();
 // Lesson 1: Print message to console
 console.log("Hello World");
 
+// Lesson 7: root Middleware
+const middlewareIPlogger = (req,res,next)=>{
+  const method = req.method;
+  const path = req.path;
+  const ip = req.ip;
+  console.log(`${method} ${path} - ${ip}`);
+  next();
+}
+app.use(middlewareIPlogger);
+
+
+
+
 app.get('/',(req,res)=>{
   // Lesson 2: All get requests to "/" receive "Hello Express" message
   // res.send("Hello Express");
